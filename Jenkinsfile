@@ -15,7 +15,7 @@ pipeline {
   
         stage('Code Analysis') {    
             steps{
-            echo "2.Helm test"
+            helm version --client
             }   
        }
   
