@@ -10,7 +10,7 @@ pipeline {
 
         stage('Clone'){
             steps{
-            withCredentials([usernamePassword(credentialsId: 'd7ab7df9-c005-487e-b1b7-918a812f55d5')]){
+            withCredentials([[credentialsId: 'd7ab7df9-c005-487e-b1b7-918a812f55d5']]) {
                 sh """
                     git clone https://git-codecommit.ap-northeast-1.amazonaws.com/v1/repos/rancher_catalog 
                 
