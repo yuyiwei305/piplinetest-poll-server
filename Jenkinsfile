@@ -23,6 +23,7 @@ pipeline {
     			    git clone https://${GIT_USERNAME}:${GIT_PASSWORD}@${REMOTE_HELM_CHART_REPOSITORY_GITHUB_URL}
     			    cd bookinfo-demo
     			    ls
+    			    pwd
 
     			   """
 				}
@@ -32,18 +33,30 @@ pipeline {
         stage('Build Image') {
             steps{
             echo "3.Build Docker Image Stage"
+            sh """
+               pwd
+
+               """
             }   
         }
 
         stage('Push Image') {
             steps {
-            echo "4.Push Docker Image Stage"  
+            echo "4.Push Docker Image Stage" 
+            sh """
+               pwd
+
+               """ 
             }
         }
   
         stage('Pudh helm chart') {
             steps {
-            echo "5.Push Docker Image Stage"  
+            echo "5.Push Docker Image Stage"
+            sh """
+               pwd
+
+               """  
             } 
         }
     }
