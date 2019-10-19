@@ -15,7 +15,7 @@ pipeline {
   
         stage('Code Analysis') {    
             steps{
-            helm version --client
+            sh helm version --client
             }   
        }
   
