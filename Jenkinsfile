@@ -20,7 +20,7 @@ pipeline {
             steps{
             withCredentials([usernamePassword(credentialsId: 'ba4dfb37-b290-488b-946f-23b165c20f69', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
     			sh """
-    			    git clone https://${GIT_USERNAME}:$GIT_PASSWORD}@${REMOTE_HELM_CHART_REPOSITORY_URL}
+    			    git clone https://${GIT_USERNAME}:${GIT_PASSWORD}@${REMOTE_HELM_CHART_REPOSITORY_URL}
 
     			    ls
 
