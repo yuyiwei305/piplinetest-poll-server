@@ -17,7 +17,7 @@ pipeline {
         stage('Code Analysis') {    
             steps{
             echo "2.Helm test"
-            sh "echo  $GIT_TAG "
+            sh "echo  $GIT_TAG"
             }   
        }
   
