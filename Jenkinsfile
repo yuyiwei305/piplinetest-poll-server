@@ -12,7 +12,7 @@ pipeline {
             steps{
             echo "1.Clone stage"
             sh """
-                git clone REMOTE_HELM_CHART_REPOSITORY_URL
+                git clone $REMOTE_HELM_CHART_REPOSITORY_URL
                 cd  rancher_catalog
                 ls
                 echo $GIT_TAG
