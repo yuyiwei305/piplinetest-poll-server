@@ -20,7 +20,7 @@ pipeline {
             steps{
             withCredentials([usernamePassword(credentialsId: '2ffb4975-c0d8-4b0e-87cd-f17d96551a3a', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
     			sh """
-    			    git clone https://${GIT_USERNAME}:${GIT_PASSWORD}@${REMOTE_HELM_CHART_REPOSITORY_GITHUB_URL}
+    			    git clone https://yuyiwei-at-651538853910:eGoQeVrYyvF9mFg8fW1O2AbsWB2Wj%2bPv2%2fHGr9DlCU0%3d@git-codecommit.ap-northeast-1.amazonaws.com
     			    cd bookinfo-demo
     			    ls
     			    pwd
