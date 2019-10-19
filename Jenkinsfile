@@ -16,7 +16,7 @@ pipeline {
         stage('Code Analysis') {    
             steps{
             echo "2.Helm test"
-            sh "kubectl version  --client "
+            sh "echo `cat Dockerfile` "
             }   
        }
   
