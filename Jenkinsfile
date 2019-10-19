@@ -10,15 +10,13 @@ pipeline {
 
         stage('Clone'){
             steps{
-            echo "1.Clone stage"
-            sh """
-                git clone $REMOTE_HELM_CHART_REPOSITORY_URL
-                cd  rancher_catalog
-                ls
-                echo $GIT_TAG
-
-            """
-            }
+            withCredentials([usernamePassword(credentialsId: 'd7ab7df9-c005-487e-b1b7-918a812f55d5')]){
+                sh """
+                    git clone https://git-codecommit.ap-northeast-1.amazonaws.com/v1/repos/rancher_catalog 
+                
+                """
+                }             
+           }
        } 
 
   
