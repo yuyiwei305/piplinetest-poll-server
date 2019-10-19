@@ -15,7 +15,8 @@ pipeline {
   
         stage('Code Analysis') {    
             steps{
-            sh "helm version --client"
+            echo "2.Helm test"
+            sh "kubectl version  --client "
             }   
        }
   
